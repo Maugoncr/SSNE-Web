@@ -64,14 +64,14 @@ setInterval(function() {
     planet.plugins.pings.add(lng, lat, { color: color, ttl: 6000, angle: 1 });
 }, 150);
 
-// Ping - Costa Rica.
-var colors = ['red'];
-setInterval(function() {
-    var lat = 9.918979862460201;
-    var lng = -84.068428890249;
-    var color = colors[Math.floor(Math.random() * colors.length)];
-    planet.plugins.pings.add(lng, lat, { color: color, ttl: 6000, angle: 1 });
-}, 150);
+// // Ping - Costa Rica.
+// var colors = ['red'];
+// setInterval(function() {
+//     var lat = 9.918979862460201;
+//     var lng = -84.068428890249;
+//     var color = colors[Math.floor(Math.random() * colors.length)];
+//     planet.plugins.pings.add(lng, lat, { color: color, ttl: 6000, angle: 1 });
+// }, 150);
 
 // Ping - Taiwán.
 /*  var colors = ['red'];
