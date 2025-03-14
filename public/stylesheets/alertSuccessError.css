@@ -1,0 +1,98 @@
+button:hover {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+.danger:hover{
+   
+    background-color: #b7192c !important;
+    border-color: #b7192c !important;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+.Regreso{
+    background-color: #00DFC2;
+    border-color: #00DFC2;
+}
+
+.Regreso:hover{
+   
+    background-color: #00A88F !important;
+    border-color: #00A88F !important;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loader {
+    position: fixed;
+    z-index: 1021;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #F3F7FD;
+    border-top-color: #3EB655;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+.p404::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #F3F7FD;
+    border-top-color: #00DFC2;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+.pError::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #F3F7FD;
+    border-top-color: #b7192c;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@media (max-width: 824px) {
+   .Texto{
+    width: 80% !important; 
+   }
+}
