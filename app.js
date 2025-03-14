@@ -75,13 +75,15 @@ app.post("/contact", (req, res) => {
         );
 })
 
-app.use((req, res) => {
-    res.render("404");
-})
+// app.use((req, res) => {
+//     res.render("404");
+// })
 
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`)
-})
+// app.listen(PORT, () => {
+//     console.log(`Server started on port ${PORT}`)
+// })
+
+module.exports = app;
