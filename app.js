@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const emailjs = require('@emailjs/nodejs');
+require("dotenv").config();
 
 const app = express();
 
@@ -55,9 +56,12 @@ app.post("/contact", (req, res) => {
     };
 
     emailjs
-        .send('service_8lugv4k', 'template_3iyfomi', templateParams, {
-            publicKey: 'cMf0d_HMqW0WvMvNM',
-            privateKey: 'XV48kk_UQUcDXXnwttPpO', // optional, highly recommended for security reasons
+        .send(
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID, templateParams, 
+        {
+            publicKey: process.env.EMAILJS_PUBLIC_KEY,
+            privateKey: process.env.EMAILJS_PRIVATE_KEY, // Optional but recommended
         })
         .then(
             function (response) {
